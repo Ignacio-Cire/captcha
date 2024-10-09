@@ -21,7 +21,7 @@ class BaseDatos extends PDO {
         $this->host = 'localhost';
         $this->database = 'usuarios';
         $this->user = 'root';
-        $this->pass = '';
+        $this->pass = '?';
         $this->debug = true;
         $this->error ="";
         $this->sql ="";
@@ -29,7 +29,7 @@ class BaseDatos extends PDO {
         
         $dns = $this->engine.':dbname='.$this->database.";host=".$this->host.";port=3306";
         try {
-           parent::__construct($dns, $this->user, $this->pass='',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+           parent::__construct($dns, $this->user, $this->pass='?',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
            $this->conec=true;
         }catch (PDOException $e) {
             $this->error = $e->getMessage();
@@ -122,7 +122,7 @@ class BaseDatos extends PDO {
             $resp =  $this->EjecutarSelect($sql);
         }
         return $resp;
-   }
+    }
    
    /**
     *Si se inserta en una tabla que tiene una columna autoincrement se retorna el id con el que se inserto el registro

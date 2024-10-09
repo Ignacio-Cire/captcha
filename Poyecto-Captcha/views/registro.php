@@ -16,12 +16,12 @@ include_once './estructura/nav.php';
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-        <form action="/register" method="POST" class="p-4 shadow bg-white rounded" style="width: 100%; max-width: 400px;">
+        <form action="./action/actionRegistro.php" method="POST" class="p-4 shadow bg-white rounded" style="width: 100%; max-width: 400px;">
             <h3 class="text-center mb-4">Crea tu cuenta</h3>
             <!-- Campo de nombre -->
             <div class="form-group mb-3">
                 <label for="name"></label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre usuario" required>
             </div>
 
             <!-- Campo de correo -->
