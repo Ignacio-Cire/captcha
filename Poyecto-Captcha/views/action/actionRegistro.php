@@ -2,7 +2,7 @@
 
 include_once '../../controller/ABMusuario.php';
 include_once '../utils/datasubmitted.php';
-include_once '../../validar.php';
+include_once '../utils/validar.php';
 
 $datos = datasubmitted();
 
@@ -17,7 +17,7 @@ if ($datos) {
     $captcha = isset($datos['g-recaptcha-response']) ? $datos['g-recaptcha-response'] : null;
 
     // Depuración de datos(muestra los datos para verificar que se reciben correctamente)
-    
+
     echo "Nombre de Usuario: $nombreUsuario <br>";
     echo "Email: $email <br>";
     echo "Contraseña: $password <br>";
